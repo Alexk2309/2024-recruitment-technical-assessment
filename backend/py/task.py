@@ -13,11 +13,12 @@ class File:
 Task 1
 """
 def leafFiles(files: list[File]) -> list[str]:
-    parentFiles = {}
-    for file in files: parentFiles[file.parent] = file
+    hasChildren = {}
+    for file in files: hasChildren[file.parent] = True
+
     noChildren = []
     for file in files:
-        result = parentFiles.get(file.id)
+        result = hasChildren.get(file.id)
         if not result: noChildren.append(file.name)
 
     return noChildren
@@ -41,7 +42,7 @@ Task 3
 """
 def largestFileSize(files: list[File]) -> int:
 
-    # Search for child Id
+    # Recursive search for file and their chidrens
     def dfs(fileId):
         currentFile = filesDict[fileId]
         currentSize = currentFile.size
@@ -49,19 +50,13 @@ def largestFileSize(files: list[File]) -> int:
             currentSize += dfs(child.id)
         return currentSize
 
-
     filesDict = {file.id: file for file in files}
     childrenDict = {file.id: [] for file in files}
-    for file in files:
-        if file.parent != -1:
-            childrenDict[file.parent].append(file)
 
-    maxSize = 0
-    for file in files:
-        if file.parent == -1:
-            maxSize = max(maxSize, dfs(file.id))
+    [childrenDict[file.parent].append(file) for file in files if file.parent != -1]
+    return max(dfs(file.id) for file in files if file.parent == -1)
 
-    return maxSize
+
 
 
 
