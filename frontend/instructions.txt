@@ -1,2 +1,12 @@
 Please detail the instructions to view your solution here:
 
+- Open the unielectives directory in terminal
+
+
+- run npm install
+
+- run npm run start
+
+view solution.
+
+Thanks!
