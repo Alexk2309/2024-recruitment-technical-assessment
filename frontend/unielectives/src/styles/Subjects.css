@@ -1,0 +1,53 @@
+#subjects-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.subject-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    padding: 30px;
+    width: 26%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.title-div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.code {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.nums-reviews {
+    font-size: 12.5px;
+}
+
+.terms-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.term-box {
+    background-color: #CCEBF6;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 13px;
+    margin-top: 60px;
+    margin-right: 10px;
+}

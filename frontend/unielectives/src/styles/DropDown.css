@@ -1,0 +1,24 @@
+#dropdown-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #989898;
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+    width: 200px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#dropdown-header {
+    &::after {
+        position: absolute;
+        width: 100%;
+        left: 190px;
+        content: '\02C5';
+        align-self: center;
+        scale: 1.1;
+    }
+}

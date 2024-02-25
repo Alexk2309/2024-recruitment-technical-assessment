@@ -1,0 +1,61 @@
+#front-page-structure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#top-image {
+    color: transparent;
+    width: 100%;
+    height: auto;
+}
+
+#front-page-content {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#title-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+#unielectives-title {
+    font-size: 70px;
+    color: #1279F2;
+    font-weight: bold;
+}
+
+#unielectives-description {
+    font-weight: bold;
+}
+
+#search-bar-div {
+    display: flex;
+    flex-direction: row;
+    border: solid 3px #9CADE9;
+    border-radius: 5px;
+    height: 35px;
+    &::before {
+        content: url('../assets/search_icon.svg');
+        scale: 1.3;
+        width: 20px;
+        margin-left: 13px;
+        margin-right: 20px;
+        margin-top: 4px;
+    }
+    align-items: center;
+}
+
+
+#search-bar {
+    width: 100%;
+    border: none;
+    caret-color: #9CADE9;
+    &::placeholder {
+        color: #9CADE9;
+        font-size: 14px;
+    }
+    outline: none;
+}
